@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Yesteryear&display=swap');
+:root {
+    --bodyFont: 'Roboto Condensed', sans-serif;
+    --headingsFont: 'Yesteryear', cursive;
+    --cream: #e5d7cc;
+    --gray: #333;
+    --orange: #dc6805;  /* rgb(220, 104, 5) */
+    --yellow: #f2cd36;  /* rgb(242, 205, 54) */
+    --font: 16px;
+    --white: #fff;
+    --lightgray: #f7f7f7;
+    --transition: .3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* basic styles */
+body {
+    font-family: var(--bodyFont);
+    background: var(--cream);
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: var(--font);
+    height: 90%;
+    
+}
+h1, h2, h3, h4 {
+    font-weight: 300;
+}
+button{
+    background: var(--orange);
+    color: var(--white);
+    padding:  10px 25px 10px 35px;
+    font-family: var(--bodyFont);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* background */
+header{
+    background-image:  linear-gradient(to left, rgba(220, 104, 5, .9), rgba(224, 205, 54, .7)),url(header.jpg);
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    padding-top: 15rem;
+}
+header .naslov h2{
+    display: inline-block;
+    font-family: var(--headingsFont);
+    font-size: 10em;
+    padding-left: 20px;
+}
+header .naslov h2:nth-child(1){
+    color: var(--gray);
+    
+}
+header .naslov h2:nth-child(2){
+    color: var(--white);
+}
+/* content */
+
+
+.content{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: -13rem;
+    margin-left: 11rem;
+    margin-right: 11rem;
+    margin-bottom: -120px;
+    padding: 0rem;
+    
+    
+}
+.content .blog{
+    background: var(--white);
+    width: 69rem;
+}
+.content .blog h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+.content .blog p{
+    margin-bottom: 20px;
+}
+
+article{
+    padding: 2rem;
+}
+
+article:nth-child(odd){
+    background: var(--white);
+}
+article:nth-child(even){
+    background: var(--lightgray);
+}
+article .admin{
+    border: 1px solid var(--gray);
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    
+}
+.content .about{
+    background: var(--yellow);
+    width: 30rem;
+    padding: 3rem;
+}
+.about h3{
+    font-family: var(--bodyFont);
+    font-size: 2rem;
+}
+.about input{
+    /* padding-right: 5rem; */
+    padding: 1rem 5rem 1rem 1rem;
+    font-family: var(--bodyFont);
+    font-size: 1.2;
+}
+.about p{
+    padding: 1rem 0rem 0rem 0rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+.about h2{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+}
+.about a{
+    color: #333;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid var(--orange);
+    padding-bottom: .8;
+}
+footer{
+    position: absolute;
+    text-align: center;
+    background-color: #dc6805;
+    height: 120px;
+    width: 100%;
+    color: var(--white);
+    padding: 50px;
+    /* margin-top: -2rem; */
+}
+ @media(max-width: 1516px){
+    header .naslov h2{
+        font-size: 7em;
+    }
+}
+@media(max-width: 768px){
+    .content{
+        flex-wrap: wrap;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .content.blog{
+        width: 100%;
+    }
+    .content .about{
+        width: 100%;
+        padding: 3rem;
+    }
+    header .naslov h2{
+        font-size: 6rem;
+    }
+}
+
+@media(max-width: 1200px){
+    header .naslov h2{
+        font-size: 6rem;
+    }
+    .content{
+        flex-wrap: wrap;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .content.blog{
+        width: 100%;
+    }
+    .content .about{
+        width: 100%;
+        padding: 3rem;
+    }
+
+
+@media(max-width: 580px){
+    header{
+        height: 40rem;
+    }
+    header .naslov h2{
+        font-size: 5rem;
+    }
+} 
